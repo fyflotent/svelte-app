@@ -1,4 +1,4 @@
-import prettier from 'eslint-config-prettier';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import { includeIgnoreFile } from '@eslint/compat';
 import js from '@eslint/js';
 import svelte from 'eslint-plugin-svelte';
@@ -14,8 +14,7 @@ export default ts.config(
   js.configs.recommended,
   ...ts.configs.recommended,
   ...svelte.configs.recommended,
-  prettier,
-  ...svelte.configs.prettier,
+  eslintPluginPrettierRecommended,
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node }
